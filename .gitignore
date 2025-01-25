@@ -33,3 +33,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Remove or comment out these lines if they exist
+# .prisma
+# prisma/client
