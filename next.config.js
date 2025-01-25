@@ -1,13 +1,12 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
   images: {
-    unoptimized: true,
     domains: ['your-image-domain.com'],
     formats: ['image/avif', 'image/webp'],
+  },
+  output: 'standalone',
+  eslint: {
+    ignoreDuringBuilds: true,
   },
   compress: true,
   poweredByHeader: false,

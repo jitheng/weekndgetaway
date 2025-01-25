@@ -1,15 +1,20 @@
 import { Metadata } from 'next'
 import { siteConfig } from '@/app/metadata'
 import { prisma } from '@/lib/prisma'
+import { cache } from 'react'
 
-// Add this function to generate static paths
-export async function generateStaticParams() {
-  const treks = await prisma.trek.findMany({
+const getTreks = cache(async () => {
+  return await prisma.trek.findMany({
     select: {
       slug: true,
     },
   })
+})
 
+// Add this function to generate static paths
+export async function generateStaticParams() {
+  const treks = await getTreks()
+  
   return treks.map((trek) => ({
     slug: trek.slug,
   }))
