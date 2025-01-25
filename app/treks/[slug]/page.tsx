@@ -1,6 +1,19 @@
 import { Metadata } from 'next'
 import { siteConfig } from '@/app/metadata'
-import prisma from '@/app/lib/prisma'
+import { prisma } from '@/lib/prisma'
+
+// Add this function to generate static paths
+export async function generateStaticParams() {
+  const treks = await prisma.trek.findMany({
+    select: {
+      slug: true,
+    },
+  })
+
+  return treks.map((trek) => ({
+    slug: trek.slug,
+  }))
+}
 
 // Generate metadata for each trek page
 export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
