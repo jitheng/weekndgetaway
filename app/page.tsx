@@ -13,21 +13,21 @@ export default function Home() {
   return (
     <main className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative h-[80vh] flex items-center justify-center bg-cover bg-center" 
+      <section className="relative h-[60vh] md:h-[80vh] flex items-center justify-center bg-cover bg-center" 
         style={{
           backgroundImage: 'url("https://images.unsplash.com/photo-1623910270365-3d5e4da04533?q=80&w=2070")',
           backgroundBlendMode: 'overlay',
           backgroundColor: 'rgba(0, 0, 0, 0.4)'
         }}>
-        <div className="text-center text-white z-10 px-4">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">
-            Discover Weekend Escapes from Bengaluru
+        <div className="text-center text-white z-10 px-4 max-w-[90%] md:max-w-2xl mx-auto">
+          <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-4 md:mb-6">
+            Discover Weekend Escapes
           </h1>
-          <p className="text-xl md:text-2xl mb-8 max-w-2xl mx-auto">
-            Explore handpicked destinations within 300km of Bengaluru perfect for your next weekend adventure
+          <p className="text-lg sm:text-xl md:text-2xl mb-6 md:mb-8">
+            Explore handpicked destinations within 300km of Bengaluru
           </p>
           <Link href="/destinations">
-            <Button size="lg" className="bg-primary hover:bg-primary/90">
+            <Button size="lg" className="w-full sm:w-auto bg-primary hover:bg-primary/90">
               <Compass className="mr-2 h-5 w-5" />
               Explore Destinations
             </Button>

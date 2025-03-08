@@ -15,17 +15,19 @@ export default function MapPage() {
   return (
     <main className="container mx-auto px-4 py-8">
       {/* Header */}
-      <div className="flex flex-col md:flex-row justify-between items-start mb-8">
-        <div>
-          <h1 className="text-4xl font-bold mb-2">Explore Destinations</h1>
-          <p className="text-muted-foreground mb-4">
+      <div className="flex flex-col gap-4 mb-8">
+        <div className="space-y-2">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold">Explore Destinations</h1>
+          <p className="text-sm sm:text-base text-muted-foreground">
             Discover weekend getaways around Bengaluru on the map
           </p>
         </div>
-        <Button variant="outline">
-          <Filter className="mr-2 h-4 w-4" />
-          Filter Destinations
-        </Button>
+        <div className="flex justify-end">
+          <Button variant="outline" className="w-full sm:w-auto">
+            <Filter className="mr-2 h-4 w-4" />
+            Filter Destinations
+          </Button>
+        </div>
       </div>
 
       {/* Map Container */}
