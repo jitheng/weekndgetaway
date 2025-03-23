@@ -87,7 +87,7 @@ const Footer = () => {
           <div>
             <h3 className="text-xl font-bold mb-4">Contact Us</h3>
             <ul className="space-y-2 text-gray-400">
-              <li>Email: jithen.g43@gmail.com</li>
+              <li>Email: </li>
               <li>Address: Kogilu Main Road, Bengaluru, Karnataka, India</li>
             </ul>
           </div>
